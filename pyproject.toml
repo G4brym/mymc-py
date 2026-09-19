@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mymc-py"
+version = "1.0.0"
+description = "Python 3 library and tools for PlayStation 2 memory card images (.ps2): read, write, format, and build cards from folder saves"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+keywords = [
+    "ps2", "playstation-2", "memory-card", "memcard", "mymc", "ps2mc",
+    "save", "saves", "uLaunchELF", "pcsx2", "aethersx2", "emulator",
+    "ps2-memory-card", "ecc",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Games/Entertainment",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Emulators",
+]
+dependencies = []
+
+[project.scripts]
+mymc = "mymc_py.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/G4brym/mymc-py"
+Repository = "https://github.com/G4brym/mymc-py"
+Original = "https://sourceforge.net/p/mymc-opl/code/"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
